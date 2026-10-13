@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxis de CSS</title>
+
+    <style>
+
+        h1 {
+            color: rgb(3, 66, 133);
+        }
+
+        #primerparrafo {
+            color: rgb(75, 82, 210);
+        }
+
+        #gruposparrafos {
+            color: rgb(0, 0, 1);
+        }
+
+        input[type="text"] {
+            background: rgb(104, 104, 160);
+        }
+
+        h1:hover {
+            color: black;
+            font-size: larger;
+        }
+
+        p {
+            color: rgb(134, 134, 196);
+        }
+
+        /* Contenedor principal */
+        #contenedor {
+            background-color: lightgray;
+            padding: 15px;
+        }
+
+        /* Primer párrafo */
+        #contenedor p:first-child {
+            background-color: lightblue;
+        }
+
+        /* Último párrafo */
+        #contenedor p:last-child {
+            background-color: lightpink;
+        }
+
+        /* Segundo párrafo */
+        #contenedor p:nth-child(2) {
+            background-color: lightgreen;
+        }
+
+        /* Párrafos pares */
+        #contenedor p:nth-child(even) {
+            border: 3px solid blue;
+        }
+
+        /* Párrafos impares */
+        #contenedor p:nth-child(odd) {
+            color: darkred;
+        }
+
+        /* Segundo contenedor */
+        #cajaextra {
+            background-color: lightyellow;
+            padding: 15px;
+        }
+
+        #cajaextra p:first-child {
+            color: red;
+        }
+
+        #cajaextra p:last-child {
+            color: green;
+        }
+
+        #cajaextra p:nth-child(3) {
+            background-color: orange;
+        }
+
+        /* Efecto al pasar el mouse */
+        #contenedor p:hover {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Repaso de la sintaxis de CSS</h1>
+
+    <p id="primerparrafo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Similique, quod corporis? Totam temporibus doloribus numquam
+        quasi repellat illum culpa officiis dicta.
+    </p>
+
+    <p id="gruposparrafos">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Amet obcaecati est illum earum nulla.
+    </p>
+
+    <p id="gruposparrafos">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Beatae pariatur facilis veritatis ut at delectus consequatur.
+    </p>
+
+    <input type="text" name="nombre" id="nombre">
+    <input type="number" name="datos" id="datos">
+
+    <hr>
+
+    <h1>Selectores avanzados</h1>
+
+    <div id="contenedor">
+
+        <p>
+            Párrafo 1: selector impar (odd).
+        </p>
+
+        <p>
+            Párrafo 2: selector par (even).
+        </p>
+
+        <p>
+            Párrafo 3: selector impar (odd).
+        </p>
+
+        <p>
+            Párrafo 4: selector par (even).
+        </p>
+
+    </div>
+
+    <hr>
+
+    <h1>Segundo contenedor</h1>
+
+    <div id="cajaextra">
+
+        <p>Primer párrafo: first-child.</p>
+
+        <p>Segundo párrafo.</p>
+
+        <p>Tercer párrafo: nth-child(3).</p>
+
+        <p>Último párrafo: last-child.</p>
+
+    </div>
+
+</body>
+</html>
